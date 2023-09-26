@@ -39,7 +39,21 @@ window.onload = function(){
     }
 
     initialize();
+
     var conteudo = '<p style="color:black;font-size:13px;padding:10px 0;>Meu endereço</p/"'
     addMarker(-20.6436524, -46.5066368, '', conteudo, true);
+
+    //mudando posição
+    //map.panTo({'lat' : -23.550520, 'lng' : -46.633309});
+
+    //mudando posição após um tempo definido
+    setTimeout(function(){
+        map.panTo({'lat' : -23.550520, 'lng' : -46.633309});
+    },4000);
+
+    //mudando zoom
+    setTimeout(function(){
+        map.setZoom(8);
+    },4000);
 
 }
