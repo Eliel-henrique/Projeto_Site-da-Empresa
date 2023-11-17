@@ -1,4 +1,4 @@
-@media screen and (Gerais){
+
     *{
         margin: 0;
         padding: 0;
@@ -17,10 +17,9 @@
 
     .clear{
         clear: both;
-    }
-}    
+    }  
 
-@media screen and (header){
+
     header{
         width: 100%;
         padding: 40px 2%;
@@ -31,7 +30,8 @@
         background-size: cover;
         background-position: center;
         font-weight: 300;
-    }
+        }
+    
 
     header nav{
         float: right;
@@ -46,13 +46,11 @@
         display: none;
     }
 
-    nav.mobile-menu:hover ul{
+    /*nav.mobile-menu:hover ul{
         opacity: 1;
-    }
+    }*/
 
     nav.mobile-menu ul{
-        transition: 2s;
-        opacity: 0;
         background-color: white;
         position: absolute;
         width: 80%;
@@ -79,7 +77,6 @@
     nav.mobile-menu ul li a{
         color: black;
         text-decoration: none;
-        box-shadow: 1px 5px 30px #999;
     }
 
     header .logo{
@@ -127,9 +124,8 @@
         margin-top: 20px;
         line-height: 30px;
     }
-}    
+    
 
-@media screen and (sessão_1){
     .sessao-1{
         width: 100%;
         background-color: #472580;
@@ -201,9 +197,8 @@
         background-size: 100% 100%;
     
     }
-}    
+  
 
-@media screen and (sessão_2){
     .sessao2{
         padding-left: 2%;
         padding-right: 2%;
@@ -233,9 +228,6 @@
         top: 50px;
         width: 90%;
     }
-}
-
-@media screen and (sessão_3){
     
     .sessao3{
         width: 100%; 
@@ -343,9 +335,7 @@
         border-radius: 8px;
         background-color: rgb(200,200,200);
     }
-}
 
-@media  screen and (sessão_4) {
 
     section.sessao4{
         background-color: #472563;
@@ -444,9 +434,7 @@
         width: 100%;
         padding-top: 100%;
     }
-}
 
-@media screen and (footer){
     footer{
         padding: 40px 20%;
         background-color: #192123;
@@ -462,7 +450,7 @@
         float: right;
         font-size: 14px;
     }
-}
+
 
 @media screen and (max-widht:830px){
     .chamada1{
