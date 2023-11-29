@@ -387,6 +387,16 @@
         border:1px solid rgb(200,200,200);
     }
 
+    .form form input[type=email]{
+        width: 90%;
+        max-width: 480px;
+        margin-top:8px;
+        height: 58px;
+        padding-left: 8px;
+        line-height: 58px;
+        border:1px solid rgb(200,200,200);
+    }
+
     .form form textarea{
         width: 90%;
         margin-top:8px;

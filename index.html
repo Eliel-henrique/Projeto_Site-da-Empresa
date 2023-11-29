@@ -174,7 +174,7 @@
 
                         <form>
                             <input type="text" name="nome" placeholder="Nome*">
-                            <input type="text" name="email" placeholder="E-mail*">
+                            <input type="email" name="email" placeholder="E-mail*">
                             <textarea name="mensagem" placeholder="Mensagem*"></textarea>
                             <div class="clear"></div>
                             <div><input type="submit" value="Enviar"></div>
@@ -214,5 +214,43 @@
         <script src="js/menu_responsivo.js"></script>
         <script src="js/menuScroll.js"></script>
         <script src="js/sliderEquipe.js"></script>
+        <script> 
+            $(function(){
+                $('form').submit(function(){
+                    if(formularioPreenchido()){
+                        var form = $('form')
+                        $('form').ajaxSubmit({
+                            beforeSubmit:function(){
+                                form.find('input[type=submit]').attr('disabled','true')
+                                form.find('input[type=submit]').animate('opacity','0.4')
+                                form.find('input[type=submit]').attr('value','Carregando')
+                            },
+                            sucess:function(data){
+                                alert("Formulário Enviado com Sucesso!")
+                                form.find('input[type=submit]').removeAttr('disabled')
+                                form.find('input[type=submit]').animate('opacity','1')
+                                form.find('input[type=submit]').attr('value','Enviar')
+                                form[0].reset();
+                            }
+                        });
+                    }else{
+                        alert("Campos vazios não são Permitidos!!!")
+                    }
+
+                    return false;
+                })
+
+                function formularioPreenchido(){
+                    var nome = $('[name=nome]').val()
+                    var email = $('[name=email]').val()
+                    var mensagem = $('[name=mensagem]').val()
+                    if(nome === '' || email === '' || mensagem === ''){
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+            })
+        </script>
     </body>
 </html>
